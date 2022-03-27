@@ -1,0 +1,73 @@
+*{
+
+box-sizing: border-box !important;
+}
+ul{
+    list-style: none;
+}
+.right-sec{
+position: relative;
+transition: .5s ease-out;
+
+
+}
+.student-list-table{
+    background-color: #fff;
+    position: relative;
+    z-index: 5;
+    transition: .5s ease-out ;
+    border-radius: 10px;
+}
+.student-list-table .titles {
+background-color: #FFB84A;
+ padding: auto 0 !important;
+ margin:auto 0 !important;
+
+}
+.right-sec img{
+    width: 110% !important;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 0;
+    opacity: .6;
+}
+#add{
+background-color: #FFB84A;
+font-weight: bold;
+}
+#show{
+    background-color: #232525;
+    color: #FFB84A;
+}
+.show{
+opacity: 1;
+ visibility: visible;
+ 
+}
+.hide{
+    height: 0;
+    overflow: hidden;
+}
+.date-time{
+ border: 2px solid #FFB84A;
+ padding: 2px 5px;
+ outline: 2px solid #232525;
+ outline-offset: 2px;
+ border-radius: 5px;
+}
+#current-date{
+    font-weight: bold;
+}
+#names,#ids,#classes{
+    padding: 0 !important;
+}
+#names li,#ids li,#classes li{
+    border-bottom: 2px solid #232525;
+    padding: 10px;
+}
+@media (min-width: 105px) {
+    .h-custom {
+      height: 100vh !important;
+    }
+  }
