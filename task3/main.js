@@ -13,20 +13,27 @@ let currentDate=document.getElementById('current-date');
 let isDateSaved=false;
 let studentsArr = [];
 
+//set date
 currentDate.innerHTML=setDate();
 
+//set time
 setInterval(myTimer, 1000);
 
 function myTimer() {
   const d = new Date();
   document.getElementById("current-time").innerHTML = d.toLocaleTimeString();
 }
+
+
 //eventListners
 
 addBtn.addEventListener("click", addStudents);
 showBtn.addEventListener("click", showList);
 
+
 //functions
+
+
 function setDate(){
 var today = new Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -37,11 +44,13 @@ return date
 
 }
 
+// add input students to array of objects
 function addStudents() {
  if(!isDateSaved)
   {
+    // print the date of inserting the first student
     document.getElementById('date').innerHTML+=currentDate.innerHTML;
-  isDateSaved=true;
+    isDateSaved=true;
 }
 
   if(studentName.value && stId.value){
@@ -50,11 +59,12 @@ function addStudents() {
     class: stClass.value,
     id:stId.value
   };
+
   studentsArr.push(student);
   studentName.value = "";
   stId.value="";
 
-  console.log(studentsArr);
+
   showMsg('Student has been added','bg-dark');
 
   setTimeout(function(){
@@ -73,7 +83,10 @@ else{
 
 }
 }
+
+// create the output table
 function add_li_element(st_name, st_class,st_id) {
+
   let st_name_li = document.createElement("li");
   let st_name_text = document.createTextNode(st_name);
   st_name_li.appendChild(st_name_text);
@@ -93,6 +106,7 @@ function add_li_element(st_name, st_class,st_id) {
    ids_ul.appendChild(st_id_li);
 
 }
+// print the table
 function showList() {
   
   
@@ -107,10 +121,11 @@ function showList() {
   }
 }
 
+
 function showMsg(text,type){
 
     infoMsg.innerHTML=text;
-    infoMsg.classList.add(type)
+    infoMsg.classList.add(type);
 
 }
 
