@@ -6,6 +6,9 @@
 body{
     background-color: #222;
 }
+html{
+    scroll-behavior: smooth;
+}
 .container{
     /* display: flex;
     justify-content: space-between;

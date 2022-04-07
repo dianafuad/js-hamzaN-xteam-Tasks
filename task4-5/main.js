@@ -55,7 +55,7 @@ function addProduct(){
 console.log(product);
   writeTable();
    clearInputs();
-
+   window.scrollTo(0,document.body.scrollHeight);
 
 }
 
