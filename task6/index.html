@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="todo-container" >
+        <h1 class="title">To Do List</h1>
+        <button id="add-time" onclick="addtime()" >Add time</button>
+        <button id="delete-time" onclick="deleteTime()">Delete time</button>
+    
+     
+
+          
+    </div>
+    
+    <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Add a new task 😍</h1>
+        <input type="text" placeholder=".......">
+        <button id="addTask">Add</button>
+    </div>
+    <div class="overlay hidden"></div>
+    
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
